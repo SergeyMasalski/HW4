@@ -1,0 +1,198 @@
+body {
+    background-color: #FAFAD2;
+}
+div {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 10vh;
+    transform: translate(-50%, -50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img:nth-of-type(1),
+img:nth-of-type(2) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+}
+img:nth-of-type(3),
+img:nth-of-type(4) {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    height: 0;
+}
+img:nth-of-type(1) {
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: calc1;  
+    animation-fill-mode: forwards; 
+}
+@keyframes calc1 {
+    0% {
+        height: 0;
+        bottom: 0;
+    }
+    100% {
+        left: 25vw;
+        bottom: 40vh;
+        height: 20%;
+        rotate: -30deg;
+    }  
+}
+img:nth-of-type(2) {
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-name: book1;  
+    animation-fill-mode: forwards; 
+}
+@keyframes book1 {
+    0% {
+        height: 0;
+        bottom: 0;
+    }
+    100% {
+        left: 40vw;
+        bottom: 50vh;
+        height: 30%;
+        rotate: -15deg;
+    }  
+}
+img:nth-of-type(3) {
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-name: paper1;  
+    animation-fill-mode: forwards; 
+}
+@keyframes paper1 {
+    0% {
+        height: 0;
+        bottom: 0;
+    }
+    100% {
+        right: 40vw;
+        bottom: 50vh;
+        height: 30%;
+        rotate: 15deg;
+    }  
+}
+img:nth-of-type(4) {
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-name: pallete1;  
+    animation-fill-mode: forwards; 
+}
+@keyframes pallete1 {
+    0% {
+        height: 0;
+        bottom: 0;
+    }
+    100% {
+        right: 25vw;
+        bottom: 40vh;
+        height: 20%;
+        rotate: 30deg;
+    }  
+}
+img:nth-of-type(5) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-name: pencil1;  
+    animation-fill-mode: forwards;
+    height: 0;
+}
+@keyframes pencil1 {
+    0% {
+        height: 0;
+        bottom: 0;
+    }
+    100% {
+        height: 20%;
+        bottom: 25vh;
+    }
+}
+ul {
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: -31px;
+    transform: translate(-100%, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: nav1;
+    animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+li {
+    height: 50px;
+    border: 1px solid #888888;
+    background-color: #C0C0C0;
+    text-align: center;
+    box-sizing: border-box;
+}
+ul li:not(:nth-of-type(1)) {
+    border-top: none;
+}
+ul::after {
+    content: "Проверка заданий";
+    width: 150px;
+    background-color: #000000;
+    height: 30px;
+    display: block;
+    position: relative;
+    left: 200px;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 5px;
+    font-size: 0.9rem;
+}
+ul:hover {
+    transform: translate(0,0);
+    transition: 1s;
+}
+a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+li:hover {
+    background:radial-gradient(center,ellipse farthest-side,#C0C0C0,#c0c0c0cf);
+    background:-webkit-radial-gradient(center,ellipse farthest-side,#C0C0C0,#c0c0c0cf);
+    background:-o-radial-radial-gradient(center,ellipse farthest-side,#C0C0C0,#c0c0c0cf);
+    background:-moz-radial-gradient(center,ellipse farthest-side,#C0C0C0,#c0c0c0cf);
+}
+@keyframes nav1 {
+    0% {
+        left: -31px;
+    }
+    100% {
+        left: 0;
+    }
+}
